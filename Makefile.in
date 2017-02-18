@@ -84,7 +84,7 @@ LD_FLAGS_TEST=-Wl,-lpthread -L$(OUT_DIR) -l$(TEST_LIB_NAME)
 .PHONY:	$(TARGETS)
 
 
-default: prepare build test run-test
+default: prepare build test 
 
 
 all: prepare build test run-test install
@@ -139,7 +139,7 @@ install:
 	mkdir -p $(PREFIX)/include/$(LIB_NAME) && \
 	mkdir -p $(PREFIX)/bin && \
 	cp -rv $(OUT_DIR)/$(LIB_FNAME) $(PREFIX)/lib/ && \
-	cp -rv include/* $(PREFIX)/include/$(LIB_NAME) && \
+	cp -rv include/* $(PREFIX)/include/ && \
 	cp -rv $(LIB_NAME).pc $(PREFIX)/lib/pkgconfig/
 
 AT_FILES = config.status Makefile config.log autom4te.cache $(LIB_NAME).pc

@@ -8,5 +8,5 @@ Description: @PACKAGE_DESC@
 Version: @PACKAGE_VERSION@
 Requires: cppgenerics >= 0.0.1
 
-Cflags: -I${includedir}/@PACKAGE_NAME@
+Cflags: -I${includedir}
 Libs: -L${libdir} -l@PACKAGE_NAME@
