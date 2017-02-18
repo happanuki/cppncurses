@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: @PACKAGE_NAME@
+Description: @PACKAGE_DESC@
+Version: @PACKAGE_VERSION@
+Requires: cppgenerics >= 0.0.1
+
+Cflags: -I${includedir}/@PACKAGE_NAME@
+Libs: -L${libdir} -l@PACKAGE_NAME@
